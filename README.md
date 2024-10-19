@@ -1,101 +1,65 @@
-# Desafio de Galeria de Imagens - Processo Seletivo Frontend Fusion
+ # Projeto de Galeria de Imagens com React + Vite + TailwindCSS
 
-> OBS : Você receberá um e-mail com a data de início dos desafios, mas eles já estão disponíveis para acesso imediato. 
-Se ainda não preencheu o formulário, por favor, acesse o link para completá-lo.
-[Forms de inscrição](https://forms.gle/EJKDNKdmVZM3zQTr7)
-é importante está inscrito no formulário , pois o seu email precisa ser validado
+Este projeto é uma aplicação web que consome a API [Picsum Photos](https://picsum.photos/) para exibir uma galeria de imagens. O objetivo principal do projeto é criar uma experiência de usuário amigável para visualizar e favoritar imagens, além de navegar entre diferentes páginas para ver as imagens já favoritadas.
 
-## Sobre o Desafio
+## Sumário
+1. [Descrição Geral](#descrição-geral)
+2. [Tecnologias Utilizadas](#tecnologias-utilizadas)
+3. [Estrutura do Projeto](#estrutura-do-projeto)
+4. [Funcionalidades Implementadas](#funcionalidades-implementadas)
+5. [Como Executar o Projeto](#como-executar-o-projeto)
+6. [Considerações Finais](#considerações-finais)
+7. [Imagens de Demonstração](#imagens-de-demonstração)
 
-Bem-vindo ao desafio de galeria de imagens do processo seletivo do projeto Frontend Fusion para a vaga de Desenvolvedor React Júnior. Este desafio foi criado para avaliar suas habilidades em desenvolvimento com React e sua capacidade de criar uma aplicação de galeria de imagens. 📸
+## 1. Descrição Geral
+Este projeto é uma aplicação web que permite aos usuários visualizar uma galeria de imagens, buscar por autor específico e favoritar as imagens desejadas. A aplicação foi construída utilizando React com Vite como bundler, além de utilizar TailwindCSS para estilização.
 
-## Objetivo
+## 2. Tecnologias Utilizadas
+- **React**: Biblioteca JavaScript para construção de interfaces de usuário.
+- **Vite**: Bundler moderno que facilita o desenvolvimento web, proporcionando um build rápido e eficiente.
+- **TailwindCSS**: Framework CSS utilitário para estilização rapida e personalização de componentes.
+- **JavaScript**: Linguagem de programação utilizada para adicionar comportamento dinâmico à aplicação.
+- **API Picsum Photos**: API pública que fornece imagens aleatórias para uso em projetos.
 
-Crie uma aplicação de galeria de imagens utilizando React e a API [Picsum Photos](https://picsum.photos/v2/list). Esta aplicação deve incluir:
+## 3. Estrutura do Projeto
+A estrutura do projeto está organizada da seguinte forma:
+- `src/`: Diretório principal onde estão localizados os principais arquivos e componentes da aplicação.
+  - `components/`: Diretório contendo todos os componentes reutilizáveis da aplicação.
+    - `ImageGallery.js`: Componente principal que exibe a galeria de imagens.
+    - `ImageCard.js`: Componente que representa cada card de imagem na galeria.
+    - `SearchBar.js`: Componente para busca por autor ou termo específico.
+  - `App.js`: Ponto de entrada da aplicação e roteamento entre componentes.
+  - `main.jsx`: Configurações iniciais do React com Vite.
+- `public/`: Diretório onde estão localizados os arquivos públicos (favicon, ícones, etc.).
+- `tailwind.config.js`: Configurações de TailwindCSS.
+- `vite.config.js`: Configurações do Vite.
 
-- Visualização de imagens obtidas da API [Picsum Photos](https://picsum.photos/v2/list).
-- Funcionalidade para salvar imagens nos favoritos. 💾
+## 4. Funcionalidades Implementadas
+- **Exibição de Imagens**: A aplicação consome a API Picsum Photos para exibir uma lista de imagens que podem ser roladas infinitamente.
+- **Busca por Autor**: Permite ao usuário buscar imagens específicas baseado no nome do autor.
+- **Favoritar Imagens**: Os usuários podem favoritar qualquer imagem na galeria, e estas ficam salvas localmente no navegador usando `localStorage`.
+- **Navegação entre Páginas**: Permite ao usuário navegar até uma página de favoritos que lista todas as imagens favoritadas.
 
-funcionalidade opcional: 
-- Opção de aplicar filtros para visualizar imagens por categoria, cor, etc. 🎨
+## 5. Como Executar o Projeto
+Para executar este projeto, siga os passos abaixo:
+1. **Clone o repositório**:
+   ```bash
+   git clone https://github.com/seu-usuario/nome-do-repositorio.git
+   cd nome-do-repositorio
+   ```
+2. **Instale as dependências**:
+   ```bash
+   npm install
+   ```
+3. **Execute o projeto**:
+   ```bash
+   npm run dev
+   ```
+4. Abra seu navegador e acesse `http://localhost:3000` para ver a aplicação rodando.
 
-- Ao clicar em uma imagem, exibir informações detalhadas como autor, dimensões, e qualquer outra propriedade relevante disponível na API. 🖼️
+## 6. Considerações Finais
+Este projeto foi desenvolvido com o objetivo de aprimorar minhas habilidades em React, Vite e TailwindCSS, além de consolidar meu entendimento sobre consumo de APIs e manipulação de estado local. A aplicação ainda é um MVP (Mínimo Produto Viável) e pode ser expandida com novas funcionalidades como comentários, ranking de autores, etc.
 
-## Diferenciais
-
-Para se destacar, recomendamos implementar os seguintes diferenciais:
-
-- **Tailwind CSS:** Utilize Tailwind CSS para estilizar sua aplicação. 🎨
-- **Gerenciadores de Estado:** Utilize gerenciadores de estado como Redux ou Context API para gerenciar o estado da aplicação. 📊
-- **Responsividade:** Certifique-se de que sua aplicação seja totalmente responsiva e funcione bem em diferentes dispositivos. 📱💻
-- **Boas Práticas de Código:** Siga boas práticas de código, como organização de arquivos, componentes reutilizáveis, e uso adequado de hooks. 🧩
-- **Acessibilidade:** Implemente boas práticas de acessibilidade para garantir que sua aplicação possa ser utilizada por todos. ♿
-- **SEO:** Otimize sua aplicação para motores de busca. 🌐
-- **Animações e Transições:** Adicione animações e transições para melhorar a experiência do usuário. 🎞️
-- **Testes:** Escreva testes para seus componentes utilizando frameworks como Jest e React Testing Library. 🧪
-
-## Entrega
-
-Faça o deploy da sua aplicação em plataformas como GitHub Pages, Heroku, Vercel, Netlify, ou qualquer outra de sua preferência. Após concluir o desafio, envie o link do deploy e do repositório do código-fonte por e-mail para **projetofrontendfusion@gmail.com**. O e-mail deve incluir:
-
-- Nome
-- Link do GitHub
-- Link do LinkedIn
-- Data de Início
-- Data de Entrega
-- Link do GitHub com o Código
-- Link do Deploy
-- Link da Postagem no LinkedIn mostrando os desafios concluídos
-
-**Observação:** É obrigatório entregar todos os três desafios em até **20 dias** após o início. Este é o **Desafio 02 de 03 desafios**. ⏳
-
-## Prazo
-
-Você tem 20 dias para concluir todos os três desafios. 📅
-
-## Avaliação
-
-Os critérios de avaliação incluirão:
-
-- Funcionalidade
-- Qualidade do código
-- Uso dos diferenciais mencionados
-- Estética e design
-- Responsividade
-- Acessibilidade
-
-## Como Participar
-
-1. Faça um fork deste repositório. 🍴
-2. Crie um branch com seu nome: nome-sobrenome.
-3. Após completar o desafio, envie o link do deploy, o repositório do código-fonte e o link da postagem no LinkedIn por e-mail para **projetofrontendfusion@gmail.com** com o assunto: **"Entrega + Desafios[02] + Seu Nome"**. 📧
-
-## Exemplo de E-mail:
-
-**Assunto:** Entrega + Desafios[02] + João Silva
-
----
-
-Olá,
-
-Segue abaixo a entrega do Desafio 02 para o processo seletivo do Frontend Fusion.
-
-**Nome:** João Silva  
-**Link do GitHub:** [https://github.com/joaosilva](https://github.com/joaosilva)  
-**Link do LinkedIn:** [https://linkedin.com/in/joaosilva](https://linkedin.com/in/joaosilva)  
-**Data de Início:** 01/09/2024  
-**Data de Entrega:** 20/09/2024  
-**Link do GitHub com o Código:** [https://github.com/joaosilva/desafio02](https://github.com/joaosilva/desafio02)  
-**Link do Deploy:** [https://joaosilva.netlify.app](https://joaosilva.netlify.app)  
-**Link da Postagem no LinkedIn:** [https://linkedin.com/posts/joaosilva/desafio-02](https://linkedin.com/posts/joaosilva/desafio-02)
-
-Agradeço a oportunidade e estou à disposição para qualquer dúvida.
-
-Atenciosamente,  
-João Silva
-
----
-
-Boa sorte e estamos ansiosos para ver seu trabalho! 🚀
-
-Este desafio faz parte do processo seletivo do projeto Frontend Fusion para a vaga de Desenvolvedor React Júnior.
+## 7. Imagens de Demonstração
+![Imagem da Galeria de Imagens](https://via.placeholder.com/150 "Galeria de Imagens")
+![Página de Favoritos](https://via.placeholder.com/150 "Página de Favoritos")
